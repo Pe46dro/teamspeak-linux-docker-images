@@ -37,8 +37,8 @@ WORKDIR /var/ts3server/
 # 13000-14000 just in case
 EXPOSE 9987/udp 10011 10022 30033 13000-14000
 
-COPY 3.3/entrypoint.sh /opt/ts3server
-COPY 3.3/healtcheck.sh /opt/ts3server
+COPY entrypoint.sh /opt/ts3server
+COPY healtcheck.sh /opt/ts3server
 
 ENTRYPOINT [ "entrypoint.sh" ]
 CMD [ "ts3server" ]
