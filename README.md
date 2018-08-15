@@ -148,9 +148,7 @@ To auto-restart unhealthy container you can use [willfarrell/autoheal](https://h
 
 
 # Mantainer
-| [<img src="https://www.gravatar.com/avatar/35923b3b04e23bef801553656b606bfag?s=100" alt="" height="100">](https://github.com/Pe46dro) |
-|--|
-| [Pe46dro](https://github.com/Pe46dro) |
+ * [Pe46dro](https://github.com/Pe46dro)
 
 # License
 
