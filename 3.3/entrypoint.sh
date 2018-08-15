@@ -47,7 +47,7 @@ if [ "$1" = 'ts3server' ]; then
 		licensepath=${TS3SERVER_LICENSEPATH}
 		filetransfer_port=${TS3SERVER_FILETRANSFERPORT:-30033}
 		query_port=${TS3SERVER_QUERYPORT:-10011}
-		query_ssh_port${TS3SERVER_QUERYSSHPORT:-10022}
+		query_ssh_port=${TS3SERVER_QUERYSSHPORT:-10022}
 		query_protocols=${TS3SERVER_QUERY_PROTOCOLS:-raw}
 		query_timeout=${TS3SERVER_QUERY_TIMEOUT:-300}
 		query_ssh_rsa_host_key=${TS3SERVER_QUERY_SSH_RSA_HOST_KEY:-ssh_host_rsa_key}
