@@ -46,6 +46,7 @@ if [ "$1" = 'ts3server' ]; then
 	cat <<- EOF >/var/run/ts3server/ts3server.ini
 		licensepath=${TS3SERVER_LICENSEPATH}
 		filetransfer_port=${TS3SERVER_FILETRANSFERPORT:-30033}
+		filetransfer_ip=
 		query_port=${TS3SERVER_QUERYPORT:-10011}
 		query_ssh_port=${TS3SERVER_QUERYSSHPORT:-10022}
 		query_protocols=${TS3SERVER_QUERY_PROTOCOLS:-raw}
