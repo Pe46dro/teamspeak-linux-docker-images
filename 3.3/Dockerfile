@@ -39,7 +39,10 @@ EXPOSE 9987/udp 10011 10022 30033 13000-14000
 
 COPY entrypoint.sh /opt/ts3server
 COPY healtcheck.sh /opt/ts3server
+
 RUN chmod +x /opt/ts3server/entrypoint.sh
+RUN chmod +x /opt/ts3server/healtcheck.sh
+
 ENTRYPOINT [ "entrypoint.sh" ]
 CMD [ "ts3server" ]
 
