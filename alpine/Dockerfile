@@ -1,4 +1,4 @@
-FROM alpine:3.7
+FROM alpine:3.8
 
 RUN apk add --no-cache ca-certificates libstdc++ su-exec
 RUN set -eux; \
@@ -32,8 +32,13 @@ WORKDIR /var/ts3server/
 #  9987 default voice
 # 10011 server query
 # 30033 file transport
-EXPOSE 9987/udp 10011 30033 
+# 13000-14000 just in case
+EXPOSE 9987/udp 10011 30033 13000-14000
 
 COPY entrypoint.sh /opt/ts3server
+COPY healtcheck.sh /opt/ts3server
+
 ENTRYPOINT [ "entrypoint.sh" ]
 CMD [ "ts3server" ]
+
+HEALTHCHECK --interval=1m --timeout=5s --start-period=5m --retries=3 CMD /opt/ts3server/healtcheck.sh
