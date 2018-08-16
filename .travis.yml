@@ -4,9 +4,13 @@ sudo: required
 services:
   - docker
 
+notifications:
+  on_success: never
+  on_failure: always
+
 matrix:
-  env:
-    - '3.3.0'
+  include:
+    - language: generic
       before_script:
         - sudo apt-get -y install netcat
       script:
