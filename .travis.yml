@@ -1,0 +1,14 @@
+language: generic
+sudo: required
+
+services:
+  - docker
+
+matrix:
+  env:
+    - '3.3.0'
+      before_script:
+        - sudo apt-get -y install netcat
+      script:
+        - cd 3.3/
+        - docker build -t pe46dro/teamspeak3-docker-image .
