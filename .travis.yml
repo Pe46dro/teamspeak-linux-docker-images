@@ -19,12 +19,12 @@ matrix:
 
 script:
   - docker build -t pe46dro/teamspeak3-docker-image .
-  - docker run -p 9987:9987/udp -p 10011:10011 -p 30033:30033 -e TS3SERVER_LICENSE=accept pe46dro/teamspeak3-docker-image
+  - docker run -p 9987:9987/udp -p 10011:10011 -p 30033:30033 -e TS3SERVER_LICENSE=accept -d pe46dro/teamspeak3-docker-image
   - echo "Test standard port"
   - nc -vz 127.0.0.1 10011
   - nc -vz 127.0.0.1 30033
   - nc -vz -u 127.0.0.1 9987
-  - docker run -p 13001:9987/udp -p 13002:13002 -p 13003:13003 -e TS3SERVER_LICENSE=accept -e TS3SERVER_FILETRANSFERPORT=13002 -e TS3SERVER_QUERYPORT=13003 pe46dro/teamspeak3-docker-image
+  - docker run -p 13001:9987/udp -p 13002:13002 -p 13003:13003 -e TS3SERVER_LICENSE=accept -e TS3SERVER_FILETRANSFERPORT=13002 -e TS3SERVER_QUERYPORT=13003 -d pe46dro/teamspeak3-docker-image
   - echo "Test custom port"
   - nc -vz 127.0.0.1 13003
   - nc -vz 127.0.0.1 13002
