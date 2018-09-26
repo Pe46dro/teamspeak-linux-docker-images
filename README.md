@@ -3,8 +3,8 @@
 This is a fork of Git repo of the Docker official image for [teamspeak](https://registry.hub.docker.com/_/teamspeak/).
 
 # Supported tags and respective `Dockerfile`
-
--	[`3.3`, `3.3.0`, `latest` (*3.3/Dockerfile*)]
+-	[`3.4`, `3.4.0`, `latest` (*src/Dockerfile*)]
+-	[`3.3`, `3.3.0` (*src/Dockerfile*)]
 
 # Quick reference
 
