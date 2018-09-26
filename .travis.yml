@@ -15,7 +15,7 @@ matrix:
   include:
     - language: generic
       before_script:
-        - cd 3.3/
+        - cd src/
 
 script:
   - docker build -t pe46dro/teamspeak3-docker-image .
